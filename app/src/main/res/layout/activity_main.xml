@@ -21,22 +21,94 @@
     <EditText
         android:id="@+id/pantalla2"
         android:layout_width="250dp"
-        android:layout_height="22dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="69dp" />
+        tools:layout_editor_absoluteX="76dp" />
 
     <EditText
         android:id="@+id/pantalla1"
         android:layout_width="180dp"
         android:layout_height="60dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/pantalla2"
         tools:layout_editor_absoluteX="139dp" />
+
+    <Button
+        android:id="@+id/btnMC"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:background="#F2F8F4"
+        android:text="MC"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <Button
+        android:id="@+id/btnMR"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:background="#F2F8F4"
+        android:text="MR"
+        app:layout_constraintEnd_toStartOf="@+id/btnMmas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnMC"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnMmas"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="162dp"
+        android:background="#F2F8F4"
+        android:text="M+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMR"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+
+    <Button
+        android:id="@+id/btnMmenos"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="111dp"
+        android:background="#F2F8F4"
+        android:text="M-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMmas"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+
+    <Button
+        android:id="@+id/btnMS"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="60dp"
+        android:background="#F2F8F4"
+        android:text="MS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMmenos"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+
+    <Button
+        android:id="@+id/btnM"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="9dp"
+        android:background="#F2F8F4"
+        android:text="M"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMS"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+
 </android.support.constraint.ConstraintLayout>
 
