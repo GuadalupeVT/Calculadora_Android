@@ -21,94 +21,138 @@
     <EditText
         android:id="@+id/pantalla2"
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="76dp" />
+        tools:layout_editor_absoluteX="65dp" />
 
     <EditText
         android:id="@+id/pantalla1"
         android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="80dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla2"
-        tools:layout_editor_absoluteX="139dp" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="104dp" />
 
     <Button
         android:id="@+id/btnMC"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="120dp"
         android:background="#F2F8F4"
         android:text="MC"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="4dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <Button
         android:id="@+id/btnMR"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="120dp"
         android:background="#F2F8F4"
         android:text="MR"
-        app:layout_constraintEnd_toStartOf="@+id/btnMmas"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnMC"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <Button
         android:id="@+id/btnMmas"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="162dp"
         android:background="#F2F8F4"
         android:text="M+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMR"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <Button
         android:id="@+id/btnMmenos"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="111dp"
         android:background="#F2F8F4"
         android:text="M-"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMmas"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <Button
         android:id="@+id/btnMS"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="60dp"
         android:background="#F2F8F4"
         android:text="MS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMmenos"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <Button
         android:id="@+id/btnM"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="9dp"
         android:background="#F2F8F4"
         android:text="M"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMS"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla1" />
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <Button
+        android:id="@+id/btnPorcentaje"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="%"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <Button
+        android:id="@+id/btnCE"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="CE"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="4"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="1"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <Button
+        android:id="@+id/btnMasMenos"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#F2F8F4"
+        android:text="\u00B1"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="469dp" />
+
 
 </android.support.constraint.ConstraintLayout>
 
