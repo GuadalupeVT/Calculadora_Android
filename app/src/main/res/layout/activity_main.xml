@@ -108,7 +108,7 @@
         android:id="@+id/btnCE"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#D4D4D4"
         android:text="CE"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -118,7 +118,7 @@
         android:id="@+id/btn7"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#D4D4D4"
         android:text="7"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -128,7 +128,7 @@
         android:id="@+id/btn4"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#D4D4D4"
         android:text="4"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -138,7 +138,7 @@
         android:id="@+id/btn1"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#D4D4D4"
         android:text="1"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -148,7 +148,7 @@
         android:id="@+id/btnMasMenos"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#D4D4D4"
         android:text="\u00B1"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -184,6 +184,35 @@
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="228dp" />
 
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#D4D4D4"
+        android:text="C"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#D4D4D4"
+        android:text="<--"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#D4D4D4"
+        android:text="\u00F7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="276dp" />
 
 </android.support.constraint.ConstraintLayout>
 
