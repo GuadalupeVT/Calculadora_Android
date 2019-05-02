@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     tools:context=".MainActivity">
 
     <TextView
@@ -43,7 +44,7 @@
         android:id="@+id/btnMC"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="#FAFAFA"
         android:text="MC"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -52,7 +53,7 @@
         android:id="@+id/btnMR"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="#FAFAFA"
         android:text="MR"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -61,7 +62,7 @@
         android:id="@+id/btnMmas"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="#FAFAFA"
         android:text="M+"
         tools:layout_editor_absoluteX="106dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -70,7 +71,7 @@
         android:id="@+id/btnMmenos"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="##FAFAFA"
         android:text="M-"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -79,7 +80,7 @@
         android:id="@+id/btnMS"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="##FAFAFA"
         android:text="MS"
         tools:layout_editor_absoluteX="209dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -88,7 +89,7 @@
         android:id="@+id/btnM"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        android:background="#F2F8F4"
+        android:background="#FAFAFA"
         android:text="M"
         tools:layout_editor_absoluteX="260dp"
         tools:layout_editor_absoluteY="188dp" />
@@ -97,7 +98,7 @@
         android:id="@+id/btnPorcentaje"
         android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:background="#F2F8F4"
+        android:background="#FAFAFA"
         android:text="%"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
@@ -152,6 +153,36 @@
         android:textSize="20sp"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="469dp" />
+
+    <Button
+        android:id="@+id/btnRaiz"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:text="\u221A"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <Button
+        android:id="@+id/btnPotencia"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:text="x\u00B2"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <Button
+        android:id="@+id/btnDivisionX"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:text="1/x"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="228dp" />
 
 
 </android.support.constraint.ConstraintLayout>
