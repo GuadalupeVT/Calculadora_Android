@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button btnMasmenos, btn_cero, btnPunto, btnIgual;
 
     byte botonPulsado=0;
+    double memoria;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -316,6 +317,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                cadena = cadena.substring(0, cadena.length() - 1);
                entrada.setText(cadena);
            }
+       }
+
+       if(click == R.id.btnMS){
+           memoria = Double.parseDouble(entrada.getText().toString());
+           entrada.setText("");
+       }
+       if(click == R.id.btnMR) {
+           entrada.setText(String.valueOf(memoria));
+       }
+       if(click == R.id.btnMmas) {
+           memoria = memoria + Double.parseDouble(entrada.getText().toString());
+       }
+       if(click == R.id.btnMmenos) {
+           memoria = memoria - Double.parseDouble(entrada.getText().toString());
+       }
+       if(click == R.id.btnMC) {
+           memoria = 0;
        }
 
 
