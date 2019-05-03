@@ -210,34 +210,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnRaiz) {
+           if(entrada.getText().toString().equals("")){
+               entrada.setText("0");
+           }else {
                num1 = Double.parseDouble(entrada.getText().toString());
                double resp = Math.sqrt(num1);
                entrada.setText(String.valueOf(resp));
+           }
        }
 
        if(click==R.id.btnDivisionX){
-           num1=Double.parseDouble(entrada.getText().toString());
-           double res= 1/num1;
-           entrada.setText(String.valueOf(res));
+           if(entrada.getText().toString().equals("")){
+               entrada.setText("0");
+           }else{
+               num1 = Double.parseDouble(entrada.getText().toString());
+               double res = 1 / num1;
+               entrada.setText(String.valueOf(res));
+           }
        }
 
        if(click==R.id.btnResiduo){
-           if(lectura.getText().toString().equals("")) {
-               lectura.setText(entrada.getText().toString());
-               entrada.setText(entrada.getText().toString());
+           if (lectura.getText().toString().equals("")) {
+               num2 = 0;
+           } else {
+               num2 = Double.parseDouble(lectura.getText().toString());
            }
 
-           num1=Double.parseDouble(lectura.getText().toString());
-           num2=Double.parseDouble(entrada.getText().toString());
-           double res= num1%num2;
-           lectura.setText(String.valueOf(res));
+           num1 = Double.parseDouble(entrada.getText().toString());
+           double resp = num1%num2;
            entrada.setText("");
+           lectura.setText(String.valueOf(resp));
        }
 
        if(click==R.id.btnPotencia){
-           num1=Double.parseDouble(entrada.getText().toString());
-           double res= num1*num1;
-           entrada.setText(String.valueOf(res));
+           if(entrada.getText().toString().equals("")){
+               entrada.setText("0");
+           }else {
+               num1 = Double.parseDouble(entrada.getText().toString());
+               double res = num1 * num1;
+               entrada.setText(String.valueOf(res));
+           }
        }
 
 
