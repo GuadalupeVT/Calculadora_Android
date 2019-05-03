@@ -51,6 +51,7 @@
         android:layout_width="51dp"
         android:layout_height="30dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_MC"
         app:layout_constraintBottom_toTopOf="@+id/btnResiduo"
         app:layout_constraintEnd_toStartOf="@+id/btnMR" />
@@ -60,6 +61,7 @@
         android:layout_width="51dp"
         android:layout_height="30dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_MR"
         app:layout_constraintBottom_toTopOf="@+id/btnResiduo"
         app:layout_constraintEnd_toStartOf="@+id/btnMmas" />
@@ -69,6 +71,7 @@
         android:layout_width="51dp"
         android:layout_height="30dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_M_mas"
         app:layout_constraintBottom_toTopOf="@+id/btnRaiz"
         app:layout_constraintEnd_toStartOf="@+id/btnMmenos" />
@@ -78,6 +81,7 @@
         android:layout_width="51dp"
         android:layout_height="30dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_M_menos"
         app:layout_constraintBottom_toTopOf="@+id/btnPotencia"
         app:layout_constraintEnd_toStartOf="@+id/btnMS" />
@@ -87,6 +91,7 @@
         android:layout_width="51dp"
         android:layout_height="30dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_MS"
         app:layout_constraintBottom_toTopOf="@+id/btnPotencia"
         app:layout_constraintEnd_toStartOf="@+id/btnM" />
@@ -97,6 +102,7 @@
         android:layout_height="30dp"
         android:layout_marginEnd="4dp"
         android:background="#FAFAFA"
+        android:onClick="onClick"
         android:text="@string/btn_M"
         app:layout_constraintBottom_toTopOf="@+id/btnDivisionX"
         app:layout_constraintEnd_toEndOf="parent" />

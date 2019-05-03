@@ -181,30 +181,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
        if (click == R.id.btnMultiplicacion) {
            botonPulsado=3;
-           if (lectura.getText().toString().equals("")) {
-               num2 = 0;
-           } else {
-               num2 = Double.parseDouble(lectura.getText().toString());
+           if(lectura.getText().toString().equals("")) {
+               num1=1;
+           }else {
+               num1=Double.parseDouble(lectura.getText().toString());
            }
-
-           num1 = Double.parseDouble(entrada.getText().toString());
-           double resp = num2 * num1;
+           if(entrada.getText().toString().equals("")) {
+               num2=1;
+           }else {
+               num2=Double.parseDouble(entrada.getText().toString());
+           }
+           double res= num1*num2;
+           lectura.setText(String.valueOf(res));
            entrada.setText("");
-           lectura.setText(String.valueOf(resp));
        }
 
        if (click == R.id.btnDivision) {
            botonPulsado=4;
-           if (lectura.getText().toString().equals("")) {
-               num2 = 0;
-           } else {
-               num2 = Double.parseDouble(lectura.getText().toString());
+           if(lectura.getText().toString().equals("")) {
+               double x=Double.parseDouble(entrada.getText().toString())*Double.parseDouble(entrada.getText().toString());
+               lectura.setText(String.valueOf(x));
+               entrada.setText(entrada.getText().toString());
            }
 
-           num1 = Double.parseDouble(entrada.getText().toString());
-           double resp = num1 / num2;
+           num1=Double.parseDouble(lectura.getText().toString());
+           num2=Double.parseDouble(entrada.getText().toString());
+           double res=num1/num2;
+           lectura.setText(String.valueOf(res));
            entrada.setText("");
-           lectura.setText(String.valueOf(resp));
 
        }
 
@@ -230,16 +234,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
        if(click==R.id.btnResiduo){
            botonPulsado=5;
-           if (lectura.getText().toString().equals("")) {
-               num2 = 0;
-           } else {
-               num2 = Double.parseDouble(lectura.getText().toString());
-           }
-
-           num1 = Double.parseDouble(entrada.getText().toString());
-           double resp = num1%num2;
-           entrada.setText("");
-           lectura.setText(String.valueOf(resp));
+          if(lectura.getText().toString().equals("")){
+              lectura.setText(entrada.getText().toString());
+              entrada.setText("");
+          }else{
+              num1 = Double.parseDouble(lectura.getText().toString());
+              num2 = Double.parseDouble(entrada.getText().toString());
+              double res = num1 % num2;
+              entrada.setText(String.valueOf(res));
+          }
        }
 
        if(click==R.id.btnPotencia){
@@ -283,16 +286,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                lectura.setText("");
            }
            if(botonPulsado==5) {
-               double n1=Double.parseDouble(lectura.getText().toString());
-               double n2=Double.parseDouble(entrada.getText().toString());
-               double res=n1%n2;
-               entrada.setText(String.valueOf(res));
-               lectura.setText("");
+               if(lectura.getText().toString().equals("")){
+                   lectura.setText(entrada.getText().toString());
+                   entrada.setText("");
+               }else{
+                   num1 = Double.parseDouble(lectura.getText().toString());
+                   num2 = Double.parseDouble(entrada.getText().toString());
+                   double res = num1 % num2;
+                   entrada.setText(String.valueOf(res));
+               }
            }
        }
        if(click==R.id.btnMasMenos){
            double num=Double.parseDouble(entrada.getText().toString())*-1;
            entrada.setText(String.valueOf(num));
+       }
+       if(click==R.id.btnC){
+           lectura.setText("");
+           entrada.setText("0");
+       }
+       if(click==R.id.btnCE){
+           entrada.setText("0");
+       }
+       if(click==R.id.btnBorrar){
+           if(entrada.getText().toString().equals("") ){
+               entrada.setText("0");
+           }else {
+               String cadena = entrada.getText().toString();
+               cadena = cadena.substring(0, cadena.length() - 1);
+               entrada.setText(cadena);
+           }
        }
 
 
