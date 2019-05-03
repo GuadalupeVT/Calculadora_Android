@@ -7,9 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    public int num;
 
-    public EditText pantalla1, pantalla2;
+    public EditText entrada, lectura;
     public Button btnMC, btnMR, btnMmas, btnMenos, btnMS, btnM, btnPorcentaje, btnRaiz, btnPotencia, btnDivisionx;
     public Button btnCE, btnC, btnBorrar, btnDivision, btn7, btn8, btn9, btnMultiplicacion;
     public Button btn4, btn5, btn6, btnResta, btn1, btn2, btn3, btnSuma;
@@ -21,9 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pantalla2 = findViewById(R.id.pantalla2);
-        pantalla1 = findViewById(R.id.pantalla1);
-        num = 0;
+        lectura = findViewById(R.id.lectura);
+        entrada = findViewById(R.id.entrada);
 
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener((View.OnClickListener) this);
@@ -97,99 +95,124 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
    public void onClick(View v) {
-        int click = v.getId();
-        String res = "";
-        res = res + pantalla1.getText();
+       int click = v.getId();
 
-        if(click == R.id.btn1) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
+       if (click == R.id.btn1) {
+           entrada.setText(entrada.getText() + "1");
+       }
+
+       if (click == R.id.btn2) {
+           entrada.setText(entrada.getText() + "2");
+       }
+
+       if (click == R.id.btn3) {
+           entrada.setText(entrada.getText() + "3");
+       }
+
+       if (click == R.id.btn4) {
+           entrada.setText(entrada.getText() + "4");
+       }
+
+       if (click == R.id.btn5) {
+           entrada.setText(entrada.getText() + "5");
+       }
+
+       if (click == R.id.btn6) {
+           entrada.setText(entrada.getText() + "6");
+       }
+
+       if (click == R.id.btn7) {
+           entrada.setText(entrada.getText() + "7");
+       }
+
+       if (click == R.id.btn8) {
+           entrada.setText(entrada.getText() + "8");
+       }
+
+       if (click == R.id.btn9) {
+           entrada.setText(entrada.getText() + "9");
+       }
+
+       if (click == R.id.btnCero) {
+           entrada.setText(entrada.getText() + "0");
+       }
+
+       if (click == R.id.btnPunto) {
+           int cont = 0;
+           for (int i = 0; i < entrada.getText().length(); i++) {
+               if (entrada.getText().toString().substring(i, i + 1).equals(".")) {
+                   cont++;
+               }
+           }
+
+           if (cont == 0) {
+               entrada.setText(entrada.getText() + ".");
+           }
+       }
+       double num1 = 0, num2 = 0;
+       if (click == R.id.btnSuma) {
+           if (lectura.getText().toString().equals("")) {
+               num2 = 0;
            } else {
-               pantalla1.setText(res+"1");
+               num2 = Double.parseDouble(lectura.getText().toString());
+           }
+
+           num1 = Double.parseDouble(entrada.getText().toString());
+           double resp = num2 + num1;
+           entrada.setText("");
+           lectura.setText(String.valueOf(resp));
+
+       }
+
+       if (click == R.id.btnResta) {
+           if (lectura.getText().toString().equals("")) {
+               num2 = 0;
+           } else {
+               num2 = Double.parseDouble(lectura.getText().toString());
+           }
+
+           num1 = Double.parseDouble(entrada.getText().toString());
+           double resp = num1 - num2;
+           entrada.setText("");
+           lectura.setText(String.valueOf(resp));
+       }
+
+       if (click == R.id.btnMultiplicacion) {
+           if (lectura.getText().toString().equals("")) {
+               num2 = 0;
+           } else {
+               num2 = Double.parseDouble(lectura.getText().toString());
+           }
+
+           num1 = Double.parseDouble(entrada.getText().toString());
+           double resp = num2 * num1;
+           entrada.setText("");
+           lectura.setText(String.valueOf(resp));
+       }
+
+       if (click == R.id.btnDivision) {
+           if (lectura.getText().toString().equals("")) {
+               num2 = 0;
+           } else {
+               num2 = Double.parseDouble(lectura.getText().toString());
+           }
+
+           num1 = Double.parseDouble(entrada.getText().toString());
+           double resp = num1 / num2;
+           entrada.setText("");
+           lectura.setText(String.valueOf(resp));
+
+       }
+
+       if (click == R.id.btnRaiz) {
+           if (entrada.getText().equals("")) {
+               num1 = Double.parseDouble(entrada.getText().toString());
+               double resp = Math.sqrt(num1);
+               entrada.setText(String.valueOf(resp));
            }
        }
 
-       if(click == R.id.btn2) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"2");
-           }
-       }
 
-       if(click == R.id.btn3) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"3");
-           }
-       }
-
-       if(click == R.id.btn4) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"4");
-           }
-       }
-
-       if(click == R.id.btn5) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"5");
-           }
-       }
-
-       if(click == R.id.btn6) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"6");
-           }
-       }
-
-       if(click == R.id.btn7) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"7");
-           }
-       }
-
-       if(click == R.id.btn8) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"8");
-           }
-       }
-
-       if(click == R.id.btn9) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"9");
-           }
-       }
-
-       if(click == R.id.btnCero) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+"0");
-           }
-       }
-
-       if(click == R.id.btnPunto) {
-           if(pantalla1.getText().equals("0") ) {
-               pantalla1.setText("0");
-           } else {
-               pantalla1.setText(res+".");
-           }
-       }
-
-
-    }
+   }
 
 }
