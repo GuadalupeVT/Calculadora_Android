@@ -52,7 +52,7 @@
         android:layout_height="30dp"
         android:background="#FAFAFA"
         android:text="@string/btn_MC"
-        app:layout_constraintBottom_toTopOf="@+id/btnPorcentaje"
+        app:layout_constraintBottom_toTopOf="@+id/btnResiduo"
         app:layout_constraintEnd_toStartOf="@+id/btnMR" />
 
     <Button
@@ -61,7 +61,7 @@
         android:layout_height="30dp"
         android:background="#FAFAFA"
         android:text="@string/btn_MR"
-        app:layout_constraintBottom_toTopOf="@+id/btnPorcentaje"
+        app:layout_constraintBottom_toTopOf="@+id/btnResiduo"
         app:layout_constraintEnd_toStartOf="@+id/btnMmas" />
 
     <Button
@@ -102,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/btnPorcentaje"
+        android:id="@+id/btnResiduo"
         android:layout_width="77dp"
         android:layout_height="33dp"
         android:background="#FAFAFA"
@@ -117,6 +117,7 @@
         android:layout_width="77dp"
         android:layout_height="35dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_CE"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn7"
@@ -165,6 +166,7 @@
         android:layout_height="35dp"
         android:layout_marginBottom="7dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_mas_menos"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -209,6 +211,7 @@
         android:layout_width="77dp"
         android:layout_height="35dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_C"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn8"
@@ -219,6 +222,7 @@
         android:layout_width="77dp"
         android:layout_height="35dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_borrar"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/btn9"
@@ -356,6 +360,7 @@
         android:layout_height="35dp"
         android:layout_marginBottom="7dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_punto"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -368,6 +373,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="7dp"
         android:background="#D4D4D4"
+        android:onClick="onClick"
         android:text="@string/btn_igual"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnM = findViewById(R.id.btnM);
         btnM.setOnClickListener((View.OnClickListener) this);
 
-        btnPorcentaje = findViewById(R.id.btnPorcentaje);
+        btnPorcentaje = findViewById(R.id.btnResiduo);
         btnPorcentaje.setOnClickListener((View.OnClickListener) this);
         btnRaiz = findViewById(R.id.btnRaiz);
         btnRaiz.setOnClickListener((View.OnClickListener) this);
@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
    public void onClick(View v) {
        int click = v.getId();
+       String botonPulsado="";
 
        if (click == R.id.btn1) {
            entrada.setText(entrada.getText() + "1");
@@ -151,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
        double num1 = 0, num2 = 0;
        if (click == R.id.btnSuma) {
+           botonPulsado="suma";
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -165,6 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnResta) {
+           botonPulsado="resta";
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -178,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnMultiplicacion) {
+           botonPulsado="multiplicacion";
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -191,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnDivision) {
+           botonPulsado="division";
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -205,11 +210,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnRaiz) {
-           if (entrada.getText().equals("")) {
                num1 = Double.parseDouble(entrada.getText().toString());
                double resp = Math.sqrt(num1);
                entrada.setText(String.valueOf(resp));
+       }
+
+       if(click==R.id.btnDivisionX){
+           num1=Double.parseDouble(entrada.getText().toString());
+           double res= 1/num1;
+           entrada.setText(String.valueOf(res));
+       }
+
+       if(click==R.id.btnResiduo){
+           if(lectura.getText().toString().equals("")) {
+               lectura.setText(entrada.getText().toString());
+               entrada.setText(entrada.getText().toString());
            }
+
+           num1=Double.parseDouble(lectura.getText().toString());
+           num2=Double.parseDouble(entrada.getText().toString());
+           double res= num1%num2;
+           lectura.setText(String.valueOf(res));
+           entrada.setText("");
+       }
+
+       if(click==R.id.btnPotencia){
+           num1=Double.parseDouble(entrada.getText().toString());
+           double res= num1*num1;
+           entrada.setText(String.valueOf(res));
        }
 
 
