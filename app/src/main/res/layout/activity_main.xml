@@ -28,7 +28,7 @@
         android:layout_marginEnd="4dp"
         android:ems="10"
         android:hint="@string/texto_cajas"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         app:layout_constraintBottom_toTopOf="@+id/entrada"
@@ -41,7 +41,7 @@
         android:layout_marginEnd="4dp"
         android:ems="10"
         android:hint="@string/texto_cajas"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btnMmas"
         app:layout_constraintEnd_toEndOf="parent" />

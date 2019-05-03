@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button btn4, btn5, btn6, btnResta, btn1, btn2, btn3, btnSuma;
     public Button btnMasmenos, btn_cero, btnPunto, btnIgual;
 
-
+    byte botonPulsado=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
    public void onClick(View v) {
        int click = v.getId();
-       String botonPulsado="";
 
        if (click == R.id.btn1) {
            entrada.setText(entrada.getText() + "1");
@@ -152,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
        double num1 = 0, num2 = 0;
        if (click == R.id.btnSuma) {
-           botonPulsado="suma";
+           botonPulsado=1;
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnResta) {
-           botonPulsado="resta";
+           botonPulsado=2;
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -181,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnMultiplicacion) {
-           botonPulsado="multiplicacion";
+           botonPulsado=3;
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -195,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if (click == R.id.btnDivision) {
-           botonPulsado="division";
+           botonPulsado=4;
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -230,6 +229,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
 
        if(click==R.id.btnResiduo){
+           botonPulsado=5;
            if (lectura.getText().toString().equals("")) {
                num2 = 0;
            } else {
@@ -250,6 +250,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                double res = num1 * num1;
                entrada.setText(String.valueOf(res));
            }
+       }
+
+       if(click==R.id.btnIgual){
+           if(botonPulsado==1) {
+               double n1=Double.parseDouble(lectura.getText().toString());
+               double n2=Double.parseDouble(entrada.getText().toString());
+               double res=n1+n2;
+               entrada.setText(String.valueOf(res));
+               lectura.setText("");
+           }
+           if(botonPulsado==2) {
+               double n1=Double.parseDouble(lectura.getText().toString());
+               double n2=Double.parseDouble(entrada.getText().toString());
+               double res=n1-n2;
+               entrada.setText(String.valueOf(res));
+               lectura.setText("");
+           }
+           if(botonPulsado==3) {
+               double n1=Double.parseDouble(lectura.getText().toString());
+               double n2=Double.parseDouble(entrada.getText().toString());
+               double res=n1*n2;
+               entrada.setText(String.valueOf(res));
+               lectura.setText("");
+           }
+
+           if(botonPulsado==4) {
+               double n1=Double.parseDouble(lectura.getText().toString());
+               double n2=Double.parseDouble(entrada.getText().toString());
+               double res=n1/n2;
+               entrada.setText(String.valueOf(res));
+               lectura.setText("");
+           }
+           if(botonPulsado==5) {
+               double n1=Double.parseDouble(lectura.getText().toString());
+               double n2=Double.parseDouble(entrada.getText().toString());
+               double res=n1%n2;
+               entrada.setText(String.valueOf(res));
+               lectura.setText("");
+           }
+       }
+       if(click==R.id.btnMasMenos){
+           double num=Double.parseDouble(entrada.getText().toString())*-1;
+           entrada.setText(String.valueOf(num));
        }
 
 
