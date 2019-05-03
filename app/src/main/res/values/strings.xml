@@ -37,5 +37,7 @@
     <string name="btn_punto">.</string>
     <string name="btn_mas_menos">\u00B1</string>
 
+    <string name="texto_cajas"> </string>
+
 
 </resources>

@@ -6,10 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
-    double num1, num2, resultado;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     public int num;
-    double ms;
 
     public EditText pantalla1, pantalla2;
     public Button btnMC, btnMR, btnMmas, btnMenos, btnMS, btnM, btnPorcentaje, btnRaiz, btnPotencia, btnDivisionx;
@@ -26,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         pantalla2 = findViewById(R.id.pantalla2);
         pantalla1 = findViewById(R.id.pantalla1);
         num = 0;
+
+        btn1 = findViewById(R.id.btn1);
+        btn1.setOnClickListener((View.OnClickListener) this);
+
 
         btnMC = findViewById(R.id.btnMC);
         btnMC.setOnClickListener((View.OnClickListener) this);
@@ -76,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
         btnResta = findViewById(R.id.btnResta);
         btnResta.setOnClickListener((View.OnClickListener) this);
 
-        btn1 = findViewById(R.id.btn1);
-        btn1.setOnClickListener((View.OnClickListener) this);
+
         btn2 = findViewById(R.id.btn2);
         btn2.setOnClickListener((View.OnClickListener) this);
         btn3 = findViewById(R.id.btn3);
@@ -94,4 +95,101 @@ public class MainActivity extends AppCompatActivity {
         btnIgual = findViewById(R.id.btnIgual);
         btnIgual.setOnClickListener((View.OnClickListener) this);
     }
+
+   public void onClick(View v) {
+        int click = v.getId();
+        String res = "";
+        res = res + pantalla1.getText();
+
+        if(click == R.id.btn1) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"1");
+           }
+       }
+
+       if(click == R.id.btn2) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"2");
+           }
+       }
+
+       if(click == R.id.btn3) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"3");
+           }
+       }
+
+       if(click == R.id.btn4) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"4");
+           }
+       }
+
+       if(click == R.id.btn5) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"5");
+           }
+       }
+
+       if(click == R.id.btn6) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"6");
+           }
+       }
+
+       if(click == R.id.btn7) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"7");
+           }
+       }
+
+       if(click == R.id.btn8) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"8");
+           }
+       }
+
+       if(click == R.id.btn9) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"9");
+           }
+       }
+
+       if(click == R.id.btnCero) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+"0");
+           }
+       }
+
+       if(click == R.id.btnPunto) {
+           if(pantalla1.getText().equals("0") ) {
+               pantalla1.setText("0");
+           } else {
+               pantalla1.setText(res+".");
+           }
+       }
+
+
+    }
+
 }
